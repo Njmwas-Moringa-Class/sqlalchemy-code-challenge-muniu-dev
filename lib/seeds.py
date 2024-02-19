@@ -25,3 +25,6 @@ if __name__ == '__main__':
 
     # Committing changes
     session.commit()
+
+    session.close()
+
