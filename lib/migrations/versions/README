@@ -1,0 +1,40 @@
+Generic single-database configuration.
+
+# Restaurant Review Code Challenge
+
+*Quick Setup:*
+```bash
+git clone; https://github.com/DianaGakuya/Phase-3-SQLAlchemy-Code-Challenge-Restaurants
+cd your_project
+pip install -r requirements.txt
+# Set up your database URI in models.py and seeds.py
+alembic upgrade head
+python seeds.py
+
+## Testing the App:
+   # Use the Python console for testing
+
+## Object Relationships:
+
+- *Review.customer():* Customer for this review.
+- *Review.restaurant():* Restaurant for this review.
+- *Restaurant.reviews():* All reviews for the restaurant.
+- *Restaurant.customers():* All customers who reviewed the restaurant.
+- *Customer.reviews():* All reviews by the customer.
+- *Customer.restaurants():* All restaurants reviewed by the customer.
+
+## Aggregate and Relationship Methods:
+
+- *Customer.full_name():* Full name of the customer.
+- *Customer.favorite_restaurant():* Restaurant with the highest star rating.
+- *Customer.add_review(restaurant, rating):* Add a new review.
+- *Customer.delete_reviews(restaurant):* Remove all reviews for a specific restaurant.
+- *Review.full_review():* Formatted review string.
+- *Restaurant.fanciest() (class method):* Restaurant with the highest price.
+- *Restaurant.all_reviews():* List of formatted review strings.
+
+## Important:
+
+- Ensure your database server is running before applying migrations.
+- Customize sample data in seeds.py.
+- Test using the Python console or scripts.
